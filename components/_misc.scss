@@ -1,0 +1,133 @@
+body {
+    
+    background-color:black;
+    overflow: hidden;
+}
+
+.start, .scen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.scen {
+    display: none;
+    justify-items: center;
+    align-items: center;
+    perspective: 10em;
+}
+
+.text {
+    position: absolute;
+    width: 13em;
+    font-size: 4rem;
+    color: rgb(11, 166, 228);
+    animation: fadeOut 5s ease-in-out forwards;
+}
+
+.title {
+    width: max-content;
+    line-height: 0.75;
+    position: absolute;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: rgb(202, 159, 16); 
+    font-family: 'Pathway Gothic One',
+    sans-serif;
+    transform:scale(6);
+    animation: fadeIn 100ms ease-out 5s forwards, scaleDown 13s ease-in-out 5s forwards, fadeOut 5s ease-in-out 13s forwards;
+    opacity: 0;
+}
+
+.title span {
+    display:block;
+    letter-spacing: 0.11em;
+}
+
+.starBG {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+    animation: fadeIn 100ms ease-in-out 5s forwards;
+
+    @for $star from 0 to 100 {
+        
+        & :nth-child(#{$star}) {
+            
+            position: absolute;
+            left: random(100) + vw;
+            top: random(100) + vh;
+            width: 0.1em;
+            height: 0.1em;
+            //transform: translate($x, $y);
+            background-color: hsl(200 100% 50% / 0.8);
+        }
+          
+    }
+}
+
+.slideText {
+    transform-style: preserve-3d;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    color: rgb(202, 159, 16);
+    font-family: 'Pathway Gothic One',
+    sans-serif;
+    width: 16em;
+    transform: rotateX(16deg) translateZ(7.5em) translateY(25em);
+    animation: scrollText 100s ease-in-out 2s forwards, fadeOut 5s ease-in-out 90s forwards, goingDown 10s ease-in-out 90s forwards;
+}
+
+.slideText p {
+    text-align: justify;
+    padding: 1em;
+}
+
+.slideText p:first-child {
+    text-align: center;
+}
+
+.slideText h2 {
+    padding: 0 0 0.5em 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@keyframes goingDown {
+    
+}
+
+@keyframes scrollText {
+    to {
+        transform: rotateX(16deg) translateZ(7.5em) translateY(-25em);
+    }
+}
+
+@keyframes scaleDown {
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
