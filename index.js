@@ -9,7 +9,7 @@ let bgMusic = paused => {
     const link = './sound/intro.mp3';
     let audio = new Audio(link);
     audio.volume = 0.5;
-    audio.loop = true;
+    audio.loop = false;
 
     audio.play();
 }
