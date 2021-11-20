@@ -84,1003 +84,6 @@ body {
   overflow: hidden;
 }
 
-.start, .scen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-.scen {
-  display: none;
-  justify-items: center;
-  align-items: center;
-  perspective: 10em;
-}
-
-.text {
-  position: absolute;
-  width: 13em;
-  font-size: 4rem;
-  color: #0ba6e4;
-  -webkit-animation: fadeOut 5s ease-in-out forwards;
-          animation: fadeOut 5s ease-in-out forwards;
-}
-
-.title {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  line-height: 0.75;
-  position: absolute;
-  font-size: 6rem;
-  text-transform: uppercase;
-  color: #ca9f10;
-  /*font-family: 'Pathway Gothic One',
-  sans-serif;*/
-  font-family: "swFont", "Pathway Gothic One", sans-serif;
-  transform: scale(6);
-  -webkit-animation: fadeIn 100ms ease-out 5s forwards, scaleDown 15.5s linear 5s forwards, fadeOut 5s ease-in-out 15s forwards;
-          animation: fadeIn 100ms ease-out 5s forwards, scaleDown 15.5s linear 5s forwards, fadeOut 5s ease-in-out 15s forwards;
-  opacity: 0;
-  color: black;
-  text-shadow: -2px -2px 0 #ca9f10, 2px -2px 0 #ca9f10, -2px 2px 0 #ca9f10, 2px 2px 0 #ca9f10;
-  letter-spacing: 0.08em;
-}
-
-.title span {
-  display: block;
-  letter-spacing: 0.12em;
-  margin: 0 0 0.05em 0.125em;
-}
-
-.starBG {
-  transform-style: preserve-3d;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  -webkit-animation: fadeIn 100ms ease-in-out 5s forwards, goingDown 10s ease-in-out 80s forwards;
-          animation: fadeIn 100ms ease-in-out 5s forwards, goingDown 10s ease-in-out 80s forwards;
-}
-.starBG :nth-child(0) {
-  position: absolute;
-  left: 91vw;
-  top: 68vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(1) {
-  position: absolute;
-  left: 67vw;
-  top: 78vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(2) {
-  position: absolute;
-  left: 24vw;
-  top: 88vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(3) {
-  position: absolute;
-  left: 29vw;
-  top: 48vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(4) {
-  position: absolute;
-  left: 17vw;
-  top: 48vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(5) {
-  position: absolute;
-  left: 12vw;
-  top: 93vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(6) {
-  position: absolute;
-  left: 29vw;
-  top: 96vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(7) {
-  position: absolute;
-  left: 77vw;
-  top: 85vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(8) {
-  position: absolute;
-  left: 6vw;
-  top: 9vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(9) {
-  position: absolute;
-  left: 19vw;
-  top: 63vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(10) {
-  position: absolute;
-  left: 56vw;
-  top: 73vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(11) {
-  position: absolute;
-  left: 93vw;
-  top: 69vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(12) {
-  position: absolute;
-  left: 6vw;
-  top: 44vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(13) {
-  position: absolute;
-  left: 7vw;
-  top: 6vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(14) {
-  position: absolute;
-  left: 68vw;
-  top: 75vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(15) {
-  position: absolute;
-  left: 71vw;
-  top: 73vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(16) {
-  position: absolute;
-  left: 100vw;
-  top: 37vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(17) {
-  position: absolute;
-  left: 96vw;
-  top: 89vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(18) {
-  position: absolute;
-  left: 73vw;
-  top: 16vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(19) {
-  position: absolute;
-  left: 28vw;
-  top: 58vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(20) {
-  position: absolute;
-  left: 53vw;
-  top: 42vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(21) {
-  position: absolute;
-  left: 74vw;
-  top: 100vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(22) {
-  position: absolute;
-  left: 93vw;
-  top: 26vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(23) {
-  position: absolute;
-  left: 33vw;
-  top: 100vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(24) {
-  position: absolute;
-  left: 22vw;
-  top: 23vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(25) {
-  position: absolute;
-  left: 5vw;
-  top: 9vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(26) {
-  position: absolute;
-  left: 25vw;
-  top: 42vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(27) {
-  position: absolute;
-  left: 97vw;
-  top: 5vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(28) {
-  position: absolute;
-  left: 51vw;
-  top: 26vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(29) {
-  position: absolute;
-  left: 35vw;
-  top: 63vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(30) {
-  position: absolute;
-  left: 83vw;
-  top: 3vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(31) {
-  position: absolute;
-  left: 54vw;
-  top: 62vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(32) {
-  position: absolute;
-  left: 60vw;
-  top: 10vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(33) {
-  position: absolute;
-  left: 25vw;
-  top: 7vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(34) {
-  position: absolute;
-  left: 66vw;
-  top: 90vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(35) {
-  position: absolute;
-  left: 42vw;
-  top: 58vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(36) {
-  position: absolute;
-  left: 64vw;
-  top: 85vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(37) {
-  position: absolute;
-  left: 12vw;
-  top: 100vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(38) {
-  position: absolute;
-  left: 8vw;
-  top: 74vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(39) {
-  position: absolute;
-  left: 77vw;
-  top: 67vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(40) {
-  position: absolute;
-  left: 85vw;
-  top: 31vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(41) {
-  position: absolute;
-  left: 78vw;
-  top: 68vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(42) {
-  position: absolute;
-  left: 75vw;
-  top: 69vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(43) {
-  position: absolute;
-  left: 96vw;
-  top: 11vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(44) {
-  position: absolute;
-  left: 37vw;
-  top: 32vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(45) {
-  position: absolute;
-  left: 33vw;
-  top: 17vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(46) {
-  position: absolute;
-  left: 57vw;
-  top: 43vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(47) {
-  position: absolute;
-  left: 98vw;
-  top: 80vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(48) {
-  position: absolute;
-  left: 18vw;
-  top: 84vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(49) {
-  position: absolute;
-  left: 35vw;
-  top: 29vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(50) {
-  position: absolute;
-  left: 20vw;
-  top: 22vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(51) {
-  position: absolute;
-  left: 46vw;
-  top: 78vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(52) {
-  position: absolute;
-  left: 80vw;
-  top: 100vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(53) {
-  position: absolute;
-  left: 70vw;
-  top: 4vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(54) {
-  position: absolute;
-  left: 54vw;
-  top: 36vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(55) {
-  position: absolute;
-  left: 66vw;
-  top: 1vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(56) {
-  position: absolute;
-  left: 2vw;
-  top: 24vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(57) {
-  position: absolute;
-  left: 9vw;
-  top: 21vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(58) {
-  position: absolute;
-  left: 92vw;
-  top: 31vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(59) {
-  position: absolute;
-  left: 13vw;
-  top: 35vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(60) {
-  position: absolute;
-  left: 57vw;
-  top: 73vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(61) {
-  position: absolute;
-  left: 34vw;
-  top: 79vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(62) {
-  position: absolute;
-  left: 99vw;
-  top: 87vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(63) {
-  position: absolute;
-  left: 72vw;
-  top: 96vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(64) {
-  position: absolute;
-  left: 15vw;
-  top: 47vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(65) {
-  position: absolute;
-  left: 87vw;
-  top: 46vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(66) {
-  position: absolute;
-  left: 63vw;
-  top: 29vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(67) {
-  position: absolute;
-  left: 42vw;
-  top: 84vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(68) {
-  position: absolute;
-  left: 72vw;
-  top: 27vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(69) {
-  position: absolute;
-  left: 12vw;
-  top: 90vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(70) {
-  position: absolute;
-  left: 53vw;
-  top: 53vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(71) {
-  position: absolute;
-  left: 72vw;
-  top: 40vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(72) {
-  position: absolute;
-  left: 17vw;
-  top: 99vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(73) {
-  position: absolute;
-  left: 44vw;
-  top: 51vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(74) {
-  position: absolute;
-  left: 46vw;
-  top: 39vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(75) {
-  position: absolute;
-  left: 60vw;
-  top: 7vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(76) {
-  position: absolute;
-  left: 64vw;
-  top: 7vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(77) {
-  position: absolute;
-  left: 56vw;
-  top: 13vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(78) {
-  position: absolute;
-  left: 38vw;
-  top: 66vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(79) {
-  position: absolute;
-  left: 85vw;
-  top: 64vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(80) {
-  position: absolute;
-  left: 19vw;
-  top: 2vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(81) {
-  position: absolute;
-  left: 15vw;
-  top: 91vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(82) {
-  position: absolute;
-  left: 51vw;
-  top: 16vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(83) {
-  position: absolute;
-  left: 64vw;
-  top: 68vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(84) {
-  position: absolute;
-  left: 13vw;
-  top: 80vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(85) {
-  position: absolute;
-  left: 72vw;
-  top: 87vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(86) {
-  position: absolute;
-  left: 34vw;
-  top: 18vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(87) {
-  position: absolute;
-  left: 6vw;
-  top: 35vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(88) {
-  position: absolute;
-  left: 63vw;
-  top: 95vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(89) {
-  position: absolute;
-  left: 32vw;
-  top: 39vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(90) {
-  position: absolute;
-  left: 36vw;
-  top: 63vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(3em);
-}
-.starBG :nth-child(91) {
-  position: absolute;
-  left: 8vw;
-  top: 16vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(92) {
-  position: absolute;
-  left: 98vw;
-  top: 39vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(93) {
-  position: absolute;
-  left: 11vw;
-  top: 25vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(94) {
-  position: absolute;
-  left: 55vw;
-  top: 52vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(95) {
-  position: absolute;
-  left: 37vw;
-  top: 66vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(96) {
-  position: absolute;
-  left: 65vw;
-  top: 34vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(97) {
-  position: absolute;
-  left: 34vw;
-  top: 41vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(4em);
-}
-.starBG :nth-child(98) {
-  position: absolute;
-  left: 24vw;
-  top: 86vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-.starBG :nth-child(99) {
-  position: absolute;
-  left: 14vw;
-  top: 55vh;
-  width: 0.1em;
-  height: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  transform: translateZ(2em);
-}
-
-.slideText {
-  transform-style: preserve-3d;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  color: #ca9f10;
-  font-family: "Pathway Gothic One", sans-serif;
-  width: 16em;
-  transform: rotateX(32deg) translateZ(7.5em) translateY(9.7em) scale(0.2);
-  -webkit-animation: scrollText 190s ease-in-out forwards, fadeOut 5s ease-in-out 75s forwards;
-          animation: scrollText 190s ease-in-out forwards, fadeOut 5s ease-in-out 75s forwards;
-  line-height: 1.2em;
-}
-
-.slideText p {
-  text-align: justify;
-  padding: 1em;
-}
-
-.slideText p:first-child {
-  text-align: center;
-}
-
-.slideText h2 {
-  padding: 0 0 0.5em 0;
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 @-webkit-keyframes goingDown {
   to {
     transform: translateY(-50em);
@@ -1131,4 +134,1004 @@ body {
   to {
     opacity: 1;
   }
+}
+.start, .scen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.start {
+  color: white;
+  font-size: 5rem;
+}
+
+.scen {
+  display: none;
+  perspective: 10em;
+}
+
+.text {
+  position: absolute;
+  width: 13em;
+  font-size: 4rem;
+  color: #0ba6e4;
+  -webkit-animation: fadeOut 5s ease-in-out forwards;
+          animation: fadeOut 5s ease-in-out forwards;
+}
+
+.title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  line-height: 0.75;
+  position: absolute;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #ca9f10;
+  font-family: "swFont", "Pathway Gothic One", sans-serif;
+  transform: scale(6);
+  -webkit-animation: fadeIn 100ms ease-out 5s forwards, scaleDown 15.5s linear 5s forwards, fadeOut 5s ease-in-out 15s forwards;
+          animation: fadeIn 100ms ease-out 5s forwards, scaleDown 15.5s linear 5s forwards, fadeOut 5s ease-in-out 15s forwards;
+  opacity: 0;
+  color: black;
+  text-shadow: -2px -2px 0 #ca9f10, 2px -2px 0 #ca9f10, -2px 2px 0 #ca9f10, 2px 2px 0 #ca9f10;
+  letter-spacing: 0.08em;
+}
+
+.title span {
+  display: block;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.05em 0.125em;
+}
+
+.starBG {
+  transform-style: preserve-3d;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-animation: fadeIn 100ms ease-in-out 5s forwards, goingDown 10s ease-in-out 80s forwards;
+          animation: fadeIn 100ms ease-in-out 5s forwards, goingDown 10s ease-in-out 80s forwards;
+}
+.starBG :nth-child(0) {
+  position: absolute;
+  left: 94vw;
+  top: 15vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(1) {
+  position: absolute;
+  left: 27vw;
+  top: 10vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(2) {
+  position: absolute;
+  left: 59vw;
+  top: 74vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(3) {
+  position: absolute;
+  left: 21vw;
+  top: 12vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(4) {
+  position: absolute;
+  left: 47vw;
+  top: 60vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(5) {
+  position: absolute;
+  left: 1vw;
+  top: 19vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(6) {
+  position: absolute;
+  left: 22vw;
+  top: 18vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(7) {
+  position: absolute;
+  left: 45vw;
+  top: 87vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(8) {
+  position: absolute;
+  left: 11vw;
+  top: 21vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(9) {
+  position: absolute;
+  left: 32vw;
+  top: 37vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(10) {
+  position: absolute;
+  left: 85vw;
+  top: 4vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(11) {
+  position: absolute;
+  left: 77vw;
+  top: 78vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(12) {
+  position: absolute;
+  left: 6vw;
+  top: 19vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(13) {
+  position: absolute;
+  left: 40vw;
+  top: 93vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(14) {
+  position: absolute;
+  left: 84vw;
+  top: 91vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(15) {
+  position: absolute;
+  left: 98vw;
+  top: 53vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(16) {
+  position: absolute;
+  left: 25vw;
+  top: 79vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(17) {
+  position: absolute;
+  left: 19vw;
+  top: 8vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(18) {
+  position: absolute;
+  left: 95vw;
+  top: 42vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(19) {
+  position: absolute;
+  left: 75vw;
+  top: 15vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(20) {
+  position: absolute;
+  left: 96vw;
+  top: 1vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(21) {
+  position: absolute;
+  left: 26vw;
+  top: 32vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(22) {
+  position: absolute;
+  left: 93vw;
+  top: 15vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(23) {
+  position: absolute;
+  left: 98vw;
+  top: 80vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(24) {
+  position: absolute;
+  left: 50vw;
+  top: 59vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(25) {
+  position: absolute;
+  left: 5vw;
+  top: 61vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(26) {
+  position: absolute;
+  left: 81vw;
+  top: 13vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(27) {
+  position: absolute;
+  left: 41vw;
+  top: 2vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(28) {
+  position: absolute;
+  left: 55vw;
+  top: 46vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(29) {
+  position: absolute;
+  left: 64vw;
+  top: 89vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(30) {
+  position: absolute;
+  left: 27vw;
+  top: 11vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(31) {
+  position: absolute;
+  left: 47vw;
+  top: 9vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(32) {
+  position: absolute;
+  left: 43vw;
+  top: 68vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(33) {
+  position: absolute;
+  left: 10vw;
+  top: 7vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(34) {
+  position: absolute;
+  left: 32vw;
+  top: 55vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(35) {
+  position: absolute;
+  left: 66vw;
+  top: 8vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(36) {
+  position: absolute;
+  left: 14vw;
+  top: 16vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(37) {
+  position: absolute;
+  left: 15vw;
+  top: 100vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(38) {
+  position: absolute;
+  left: 63vw;
+  top: 41vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(39) {
+  position: absolute;
+  left: 85vw;
+  top: 93vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(40) {
+  position: absolute;
+  left: 72vw;
+  top: 47vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(41) {
+  position: absolute;
+  left: 95vw;
+  top: 47vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(42) {
+  position: absolute;
+  left: 26vw;
+  top: 25vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(43) {
+  position: absolute;
+  left: 85vw;
+  top: 15vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(44) {
+  position: absolute;
+  left: 29vw;
+  top: 83vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(45) {
+  position: absolute;
+  left: 96vw;
+  top: 87vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(46) {
+  position: absolute;
+  left: 99vw;
+  top: 19vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(47) {
+  position: absolute;
+  left: 81vw;
+  top: 70vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(48) {
+  position: absolute;
+  left: 34vw;
+  top: 87vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(49) {
+  position: absolute;
+  left: 8vw;
+  top: 79vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(50) {
+  position: absolute;
+  left: 98vw;
+  top: 61vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(51) {
+  position: absolute;
+  left: 66vw;
+  top: 100vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(52) {
+  position: absolute;
+  left: 45vw;
+  top: 73vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(53) {
+  position: absolute;
+  left: 70vw;
+  top: 11vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(54) {
+  position: absolute;
+  left: 84vw;
+  top: 54vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(55) {
+  position: absolute;
+  left: 53vw;
+  top: 45vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(56) {
+  position: absolute;
+  left: 65vw;
+  top: 91vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(57) {
+  position: absolute;
+  left: 31vw;
+  top: 78vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(58) {
+  position: absolute;
+  left: 33vw;
+  top: 1vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(59) {
+  position: absolute;
+  left: 1vw;
+  top: 14vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(60) {
+  position: absolute;
+  left: 76vw;
+  top: 75vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(61) {
+  position: absolute;
+  left: 69vw;
+  top: 6vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(62) {
+  position: absolute;
+  left: 64vw;
+  top: 68vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(63) {
+  position: absolute;
+  left: 44vw;
+  top: 2vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(64) {
+  position: absolute;
+  left: 70vw;
+  top: 94vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(65) {
+  position: absolute;
+  left: 98vw;
+  top: 65vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(66) {
+  position: absolute;
+  left: 26vw;
+  top: 56vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(67) {
+  position: absolute;
+  left: 69vw;
+  top: 7vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(68) {
+  position: absolute;
+  left: 31vw;
+  top: 99vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(69) {
+  position: absolute;
+  left: 74vw;
+  top: 77vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(70) {
+  position: absolute;
+  left: 39vw;
+  top: 59vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(71) {
+  position: absolute;
+  left: 20vw;
+  top: 64vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(72) {
+  position: absolute;
+  left: 53vw;
+  top: 39vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(73) {
+  position: absolute;
+  left: 79vw;
+  top: 87vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(74) {
+  position: absolute;
+  left: 89vw;
+  top: 33vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(75) {
+  position: absolute;
+  left: 5vw;
+  top: 6vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(76) {
+  position: absolute;
+  left: 19vw;
+  top: 56vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(77) {
+  position: absolute;
+  left: 86vw;
+  top: 82vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(78) {
+  position: absolute;
+  left: 84vw;
+  top: 3vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(79) {
+  position: absolute;
+  left: 16vw;
+  top: 13vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(80) {
+  position: absolute;
+  left: 79vw;
+  top: 1vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(81) {
+  position: absolute;
+  left: 12vw;
+  top: 80vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(82) {
+  position: absolute;
+  left: 6vw;
+  top: 73vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(83) {
+  position: absolute;
+  left: 46vw;
+  top: 95vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(84) {
+  position: absolute;
+  left: 71vw;
+  top: 56vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(85) {
+  position: absolute;
+  left: 74vw;
+  top: 64vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(86) {
+  position: absolute;
+  left: 53vw;
+  top: 74vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(87) {
+  position: absolute;
+  left: 49vw;
+  top: 84vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(88) {
+  position: absolute;
+  left: 24vw;
+  top: 12vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(89) {
+  position: absolute;
+  left: 40vw;
+  top: 61vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(90) {
+  position: absolute;
+  left: 33vw;
+  top: 82vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(91) {
+  position: absolute;
+  left: 5vw;
+  top: 17vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(92) {
+  position: absolute;
+  left: 22vw;
+  top: 10vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(93) {
+  position: absolute;
+  left: 59vw;
+  top: 96vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(94) {
+  position: absolute;
+  left: 27vw;
+  top: 36vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(95) {
+  position: absolute;
+  left: 11vw;
+  top: 89vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+.starBG :nth-child(96) {
+  position: absolute;
+  left: 31vw;
+  top: 42vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(97) {
+  position: absolute;
+  left: 52vw;
+  top: 5vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(4em);
+}
+.starBG :nth-child(98) {
+  position: absolute;
+  left: 5vw;
+  top: 93vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(3em);
+}
+.starBG :nth-child(99) {
+  position: absolute;
+  left: 36vw;
+  top: 22vh;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateZ(2em);
+}
+
+.slideText {
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #ca9f10;
+  font-family: "Pathway Gothic One", sans-serif;
+  width: 16em;
+  transform: rotateX(32deg) translateZ(7.5em) translateY(9.7em) scale(0.2);
+  -webkit-animation: scrollText 190s ease-in-out forwards, fadeOut 5s ease-in-out 75s forwards;
+          animation: scrollText 190s ease-in-out forwards, fadeOut 5s ease-in-out 75s forwards;
+  line-height: 1.2em;
+}
+
+.slideText p {
+  text-align: justify;
+  padding: 1em;
+}
+
+.slideText p:first-child {
+  text-align: center;
+}
+
+.slideText h2 {
+  padding: 0 0 0.5em 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

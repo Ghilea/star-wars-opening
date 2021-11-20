@@ -14,8 +14,10 @@ let bgMusic = paused => {
     audio.play();
 }
 
+let start = document.querySelector('.start');
+
 //start the game
-document.querySelector('.start').addEventListener('click', () => {
+start.addEventListener('click', () => {
     
     let scen = document.querySelector('.scen');
 
@@ -26,6 +28,7 @@ document.querySelector('.start').addEventListener('click', () => {
     }, 3000); 
 
      scen.style.display = 'grid';
+     start.style.display = 'none';
     }
     
 

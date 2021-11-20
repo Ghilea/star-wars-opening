@@ -1,0 +1,29 @@
+@keyframes goingDown {
+    to {
+        transform: translateY(-50em);
+    }
+}
+
+@keyframes scrollText {
+    to {
+        transform: rotateX(32deg) translateZ(7.5em) translateY(-25em) scale(0.2);
+    }
+}
+
+@keyframes scaleDown {
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
