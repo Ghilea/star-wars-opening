@@ -1,0 +1,56 @@
+.starBG {
+    transform-style: preserve-3d;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    animation: fadeIn 100ms ease-in-out 5s forwards,
+    goingDown 10s ease-in-out 80s forwards; //80;
+
+    @for $star from 0 to 100 {
+
+        & :nth-child(#{$star}) {
+
+            position: absolute;
+            left: random(100) + vw;
+            top: random(200) + vh;
+            width: 0.1em;
+            height: 0.1em;
+            //transform: translate($x, $y);
+            background-color: hsl(0 0% 100% / 0.8);
+            transform: translateZ(random(3) + 1em);
+        }
+
+    }
+}
+
+.moon{
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    transform: translate(-17em, 32em) translateZ(2em);
+    background-image: radial-gradient(#000d1a, #000d1a, #000D2D, #000d1a);
+    border-radius: 50%;
+    box-shadow: inset -1em 0 1em #14383d,
+    0em 0 3em 1em #05071b;
+    animation: goingUpMoon 8s ease-in-out 80s forwards; //80
+}
+
+.planet {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 140vw;
+    height: 100vh;
+    transform: translate(7em, 85em) rotateX(5deg);
+    background-image: radial-gradient(#000D34, #000D1A, #000D2D, #000CBB);
+    border-radius: 50%;
+    box-shadow: inset -5em 0 5em #143877,
+    0 -1em 1em #143878,
+    0 0.5em 1em #05071b;
+    animation: goingUpPlanet 8s ease-in-out 80s forwards; //80
+}

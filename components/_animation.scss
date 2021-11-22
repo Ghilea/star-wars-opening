@@ -4,6 +4,18 @@
     }
 }
 
+@keyframes goingUpMoon {
+    to {
+        transform: translate(-17em, 2em) translateZ(2em);
+    }
+}
+
+@keyframes goingUpPlanet {
+    to {
+        transform: translate(7em, 35em) rotateX(5deg);
+    }
+}
+
 @keyframes scrollText {
     to {
         transform: rotateX(32deg) translateZ(7.5em) translateY(-25em) scale(0.2);
